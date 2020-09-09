@@ -18,7 +18,20 @@ search.addEventListener('keyup', (e) => {
           ui.showAlert();
         } else {
           // Show Profile
-          ui.showProfile(data.profile);
+          let output = '';
+          data.repos.forEach(repo => {
+            output +=
+            `<div class="card mb-3">
+              <h3 class="card-header">${repo.name}</h3>
+              <div class="card-body">
+                <p class="card-text">${repo.description}</p>
+              </div>
+              <div class="card-body">
+                <a href="${repo.html_url}" target="_blank" class="card-link">Visit Repo</a>
+              </div>
+            </div>`;
+          });
+          ui.showProfile(data.profile,output);
         }
       })
   } else {

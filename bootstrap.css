@@ -11012,3 +11012,21 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
 .list-group {
   font-size: 0.930125rem;
 }
+
+/* custom CSS */
+.main-card {
+  border: none;
+  margin: auto;
+  width: 90%;
+}
+
+.input-field {
+  width: 42%;
+  margin: auto;
+}
+
+.button-view {
+  margin-top: 6em;
+  padding: 0.5em;
+  border-radius: 3px;
+}
